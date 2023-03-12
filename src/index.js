@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Root from './Root';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1>GreenSHop - #Bismillah</h1>
+    <Root/>
   </React.StrictMode>
 );
 

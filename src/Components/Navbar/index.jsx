@@ -3,12 +3,11 @@ import { Navigate, NavLink, Route } from 'react-router-dom'
 import { Navigations } from '../../Utils/navigations'
 import { Logo, NavbarStyle, NavLinks, Options, ToHome , SearchStyle,ShopStyle,LogoutStyle} from './styled'
 
-
 const Navbar = () => {
   return (
     <NavbarStyle>
       <ToHome>
-        <Logo onClick={() => Navigate(<Route path='./home' />)} />
+        <Logo  />
       </ToHome>
       <NavLinks>
         {

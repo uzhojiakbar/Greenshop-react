@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as LogoBig } from '../../Assets/logo/logo.svg'
+import { ReactComponent as LogoBig } from '../../Assets/logo/Logo.svg'
 
 import { ReactComponent as search } from '../../Assets/icons/search.svg'
 import { ReactComponent as shop } from '../../Assets/icons/shop.svg'

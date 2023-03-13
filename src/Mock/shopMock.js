@@ -1,7 +1,7 @@
-import p1_1 from '../Assets/imgs/product/product_1_1.png'
-import p1_2 from '../Assets/imgs/product/product_1_2.png'
-import p1_3 from '../Assets/imgs/product/product_1_3.png'
-import p1_4 from '../Assets/imgs/product/product_1_4.png'
+import p1_1 from '../Assets/imgs/product_1_3.png'
+import p1_2 from '../Assets/imgs/product_1_3.png'
+import p1_3 from '../Assets/imgs/product_1_3.png'
+import p1_4 from '../Assets/imgs/product_1_3.png'
 
 export const ShopMock = [
     {

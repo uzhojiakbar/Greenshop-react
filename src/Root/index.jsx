@@ -1,12 +1,12 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-import ShopingCard from '../Components/ShopingCard'
+import Shop from '../Components/Shop'
 import './style.css'
 const Root = () => {
     return (
         <div className='main-root'>
             <Navbar/>
-            <ShopingCard/>
+            <Shop/>
         </div>
     )
 }

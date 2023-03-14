@@ -1,12 +1,20 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Navbar from '../Components/Navbar'
-import Shop from '../Components/Shop'
+import { Navigations } from '../Utils/navigations'
 import './style.css'
 const Root = () => {
     return (
         <div className='main-root'>
-            <Navbar/>
-            <Shop/>
+            <Navbar />
+            <Routes>
+
+                {
+                    Navigations.map((v) => {
+                        return <Route path={v.path} element={v.element} />
+                    })
+                }
+            </Routes>
         </div>
     )
 }

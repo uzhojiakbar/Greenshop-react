@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { ReactComponent as LogoBig } from '../../Assets/logo/Logo.svg'
 
+const media = {
+    mobile: '(max-width: 425px)'
+}
 
 const NavbarStyle = styled.div`
     height: 60px;
@@ -8,13 +11,15 @@ const NavbarStyle = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 15px;
+    @media ${media.mobile}{
+        display: none;
+    }
 `
 const Logo = styled(LogoBig)`
     cursor: pointer;
 `
 const ToHome = styled.div`
 `
-
 const NavLinks = styled.div`
     display: flex;
     gap: 50px;
@@ -133,4 +138,78 @@ const Options = styled.div`
     }
 `
 
-export { NavbarStyle, Logo, ToHome, NavLinks, Options }
+const DestkopNavStyle = styled.div`
+    display: none;
+    @media ${media.mobile}{
+        display: flex;
+    }
+`
+
+const MobileNav = styled.div`
+    width: 100%;
+    margin: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
+const InputM = styled.div`
+    position: relative;
+    width: 300px;
+    height: 60px;
+    background: #F8F8F8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    .icon-nav{
+        position: relative;
+        left: 10px;
+        font-size: 18px;
+        color: #A5A5A5;
+    }
+    .input{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 400;
+        font-size: 18px;
+        color: #A5A5A5;
+        padding: 15px;
+        background-color: transparent;
+        padding: 15px;
+        padding-left: 40px;
+        border-radius: 10px;
+        ::placeholder{
+            font-size: 18px;
+            color: #A5A5A5;
+        }
+    }
+`
+
+const Searchnav = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(137.05deg, rgba(70, 163, 88, 0.45) -24.6%, #46A358 100%);
+    box-shadow: 0px 10px 20px rgba(70, 163, 88, 0.3);
+    border-radius: 14px;
+
+    width: 60px;
+    height: 60px;
+
+    color: white;
+    font-size: 22px;
+    transition: all .3s;
+    :hover{
+        background: linear-gradient(70deg, rgba(70, 163, 88, 0.45) -24.6%, #46A358 100%);
+    }
+    :active{
+        background: linear-gradient(70deg, rgba(70, 163, 88, 0.45) -24.6%, #46A358 100%);
+    }
+`
+
+export { Searchnav, InputM, DestkopNavStyle, MobileNav, NavbarStyle, Logo, ToHome, NavLinks, Options }

@@ -12,3 +12,9 @@
     margin: 0 auto;
     padding: 0 30px;
 }
+
+@media (max-width: 425px){
+    .main-root{
+        width: 425px;
+    }
+}

@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { ReactComponent as LogoBig } from '../../Assets/logo/Logo.svg'
 
 const media = {
-    mobile: '(max-width: 425px)'
+    mobile: '(max-width: 425px)',
+    tablet: '(max-width: 768px)'
 }
 
 const NavbarStyle = styled.div`
@@ -11,29 +12,45 @@ const NavbarStyle = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 15px;
+    @media ${media.tablet}{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     @media ${media.mobile}{
         display: none;
     }
 `
 const Logo = styled(LogoBig)`
     cursor: pointer;
+    @media ${media.tablet}{
+        width: 120px;
+    }
 `
 const ToHome = styled.div`
 `
 const NavLinks = styled.div`
     display: flex;
+    align-items: center;
     gap: 50px;
+    @media ${media.tablet}{
+        gap: 25px;
+    }
     .link{
         font-family: 'Source Code Pro', monospace;
         font-weight: 400;
         font-size: 16px;
-
+        vertical-align: middle;
         color: #3D3D3D;
         text-decoration: none;
         border-bottom: 3px solid transparent;
         padding-bottom: 15px;
         :hover{
             border-bottom: 3px solid #46A358;
+        }
+        @media ${media.tablet}{
+            font-size: 14px;
+            padding-bottom: 5px;
         }
     }
     .active{
@@ -52,6 +69,13 @@ const Options = styled.div`
     .icon-nav{
         font-size: 18px;
     }
+
+    @media ${media.tablet}{
+        .icon-nav{
+            font-size: 15px;
+        }
+    }
+
     .icon-nav:hover{
         color: gray;
     }
@@ -97,11 +121,20 @@ const Options = styled.div`
         -moz-user-select: none; // Old versions of Firefox
         -ms-user-select: none; // Internet Explorer/Edge
         user-select: none;
-
         :hover{
             background-color: transparent;
             color: #46A358;
             border: 3px solid #46A358;
+        }
+    }
+    @media ${media.tablet}{
+        .login{
+            padding: 4px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            font-size: 14px;
         }
     }
     .search-inp{

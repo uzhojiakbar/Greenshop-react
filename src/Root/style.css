@@ -8,25 +8,25 @@
 }
 
 .main-root {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 30px;
 }
 
 @media (max-width: 1024px) {
     .main-root {
-        width: 1024px;
+        max-width: 1024px;
     }
 }
 
 @media (max-width: 768px) {
     .main-root {
-        width: 768px;
+        max-width: 768px;
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     .main-root {
-        width: 425px;
+        max-width: 500px;
     }
 }

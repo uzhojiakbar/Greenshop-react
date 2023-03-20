@@ -13,12 +13,14 @@ const Navbar = () => {
         </ToHome>
         <NavLinks>
           {
-            Navigations.map((v) => <NavLink
+            Navigations.map((v) => v.show && v.public && (
+              <NavLink
               className={({ isActive }) => isActive ? 'active link' : 'link'}
               to={v.path}
             >
               {v.name}
             </NavLink>
+            )
             )
           }
         </NavLinks>

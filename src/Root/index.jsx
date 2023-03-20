@@ -8,7 +8,7 @@ const Root = () => {
         <div className='main-root'>
             <Navbar />
             <Routes>
-
+                
                 {
                     Navigations.map((v) => {
                         return <Route path={v.path} element={v.element} />

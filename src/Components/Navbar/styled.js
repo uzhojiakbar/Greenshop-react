@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as LogoBig } from '../../Assets/logo/Logo.svg'
 
 const media = {
-    mobile: '(max-width: 425px)',
+    mobile: '(max-width: 500px)',
     tablet: '(max-width: 768px)'
 }
 
